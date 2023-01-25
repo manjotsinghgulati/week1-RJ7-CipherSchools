@@ -11,16 +11,15 @@ import './Test.css';
 // }
 
 class Test extends React.Component {
+    state = {isLoggedIn: false};
     render() {
         return (
-            <div>
-                <h1 id = "testId" 
-                // style= {{
-                //     color: "red",
-                //     backgroundColor: "yellow"
-                // }}
-                >
-                Test</h1>
+            <div>{
+                !this.state.isLoggedIn 
+                ? (<h1>Logged Out</h1>) 
+                : (<h1>Logged In</h1>)
+            }
+            <button onClick={(e) => this.setState({isLoggedIn: true})}>Login</button>
             </div>
         );
     }

@@ -1,16 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import Test from './Test.js'
+import AllUserList from './components/AllUserList'
 
 function App() {
   return (
     <div className="App">
-    <Test key={1} />
-    <Test key={2} />
-    <Test key={3} />
-    <Test key={4} />
-    <Test key={5} />
-    <Test key={6} />
+    {/* <Test key={1} /> */}
+
+    <AllUserList />
+
 
     </div>
   );
