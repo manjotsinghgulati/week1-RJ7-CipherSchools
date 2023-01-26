@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import UserDetails from "./UserDetails";
+import Text from "./Test";
 
-const AllUserList = () => {
-  let allUsers = [
+const AllUserList = () =>{
+
+  const [state, setState] =  useState({
+    name: "Manjot Singh",
+  })
+    
+    let allUsers = [
     {
       name: "Alex",
       email: "alex@abc.com",
@@ -20,17 +26,25 @@ const AllUserList = () => {
     },
   ];
 
-//   let array = allUsers.map((user, index) => {
-//    <UserDetails key = {index} user={user} />;
-//   })
+  let setStateName = (name) => {
+    setState({...state, name})
+  };
+
+  // let array = allUsers.map((user, index) => {
+  //  <UserDetails key = {index} user={user} />;
+  // })
 
     return (
         <div>
+            <Text name={state.name} setName={setStateName}/>
             {allUsers.map((user, index) => (
             <UserDetails key={index} user={user}/>
             ))}
         </div>
     )
-};
+}
+
+
+
 
 export default AllUserList;

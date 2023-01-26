@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Test from './Test.js'
+import Test from './components/Test'
 import AllUserList from './components/AllUserList'
 
 function App() {
